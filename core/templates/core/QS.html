@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block banner %}
+<section class="position-relative">
+  <img src="https://images.unsplash.com/photo-1526483360412-f4dbaf036963?q=80&w=1600&auto=format&fit=crop"
+       class="w-100" style="max-height: 380px; object-fit: cover;" alt="Bosque nativo de Chile">
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end overlay-dark">
+    <div class="container text-white pb-4">
+      <h1 class="display-6 fw-bold">Quiénes Somos</h1>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="row g-4 align-items-center">
+  <div class="col-12 col-lg-6">
+    <h2 class="h4">Nuestro propósito</h2>
+    <p>Difundir y educar sobre la biodiversidad chilena, fomentando la conservación de especies nativas y endémicas,
+       y promoviendo el acceso abierto a información confiable mediante fuentes oficiales.</p>
+    <ul class="list-unstyled">
+      <li><i class="fa-solid fa-leaf me-2 text-success"></i>Enfoque educativo y colaborativo</li>
+      <li><i class="fa-solid fa-mountain me-2 text-success"></i>Contenido basado en fuentes públicas</li>
+      <li><i class="fa-solid fa-earth-americas me-2 text-success"></i>Respeto por licencias y atribuciones</li>
+    </ul>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="ratio ratio-16x9 rounded overflow-hidden">
+      <iframe src="https://www.youtube.com/embed/Scxs7L0vhZ4" title="Paisajes de Chile" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+{% endblock %}

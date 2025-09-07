@@ -1,0 +1,69 @@
+{% extends "core/base.html" %}
+
+{% block banner %}
+<section class="position-relative">
+  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop"
+       class="w-100" style="max-height: 440px; object-fit: cover;" alt="Paisaje chileno">
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay-dark">
+    <div class="container text-white">
+      <h1 class="display-5 fw-bold">Fauna y Flora de Chile</h1>
+      <p class="lead mb-0">Explora especies nativas desde el desierto de Atacama hasta la Patagonia.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<!-- Bloque dinámico 1: Especies destacadas/amenazadas -->
+<section class="mb-5">
+  <div class="d-flex justify-content-between align-items-end mb-3">
+    <h2 class="h4 mb-0">Especies destacadas</h2>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'galeria' %}">Ver todas</a>
+  </div>
+  <div class="row g-4">
+    {% for e in amenazadas %}
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="{{ e.imagen_url }}" class="card-img-top" alt="{{ e.nombre_comun|default:e.nombre_cientifico }}">
+          <div class="card-body">
+            <h3 class="h6 card-title mb-1">{{ e.nombre_comun|default:e.nombre_cientifico }}</h3>
+            <p class="text-muted mb-2"><em>{{ e.nombre_cientifico }}</em></p>
+            {% if e.estado_conservacion_cl %}
+              <span class="badge text-bg-danger">{{ e.get_estado_conservacion_cl_display|default:'Estado N/D' }}</span>
+            {% endif %}
+          </div>
+          <div class="card-footer bg-white">
+            {% if e.simbio_url %}<a href="{{ e.simbio_url }}" class="me-2" target="_blank">SIMBIO</a>{% endif %}
+            {% if e.rce_fuente_url %}<a href="{{ e.rce_fuente_url }}" target="_blank">Clasificación MMA</a>{% endif %}
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="col-12"><div class="alert alert-info">Aún no hay especies cargadas.</div></div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Bloque dinámico 2: Noticias/Curiosidades -->
+<section>
+  <h2 class="h4 mb-3">Últimas noticias</h2>
+  <div class="row g-4">
+    {% for n in noticias %}
+      <div class="col-12 col-md-6">
+        <div class="card h-100">
+          {% if n.imagen_url %}
+          <img src="{{ n.imagen_url }}" class="card-img-top" alt="{{ n.titulo }}">
+          {% endif %}
+          <div class="card-body">
+            <h3 class="h6">{{ n.titulo }}</h3>
+            <p class="mb-2 text-muted">{{ n.fecha_publicacion }}</p>
+            <p class="mb-0">{{ n.contenido|truncatewords:35 }}</p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="col-12"><div class="alert alert-info">Sin noticias por ahora.</div></div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+
+{% block banner %}
+<section class="bg-primary-subtle py-5">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Preguntas Frecuentes</h1>
+    <p class="mb-0">Conceptos clave sobre especies nativas, endémicas y su conservación.</p>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="accordion" id="faqAccordion">
+  {% for f in faqs %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="h{{ forloop.counter }}">
+        <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" 
+        type="button"
+        data-bs-toggle="collapse" 
+        data-bs-target="#c{{ forloop.counter }}"
+        aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" 
+        aria-controls="c{{ forloop.counter }}">
+        {{ f.pregunta }}
+        </button>
+
+      </h2>
+      <div id="c{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+           aria-labelledby="h{{ forloop.counter }}" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          {{ f.respuesta|linebreaks }}
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <div class="alert alert-info">Aún no hay preguntas cargadas.</div>
+  {% endfor %}
+</div>
+{% endblock %}
