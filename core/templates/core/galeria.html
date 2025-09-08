@@ -10,33 +10,32 @@
 {% endblock %}
 
 {% block content %}
-<div class="row g-4">
-  {# Muestra desde un queryset "especies" o una lista "imagenes" #}
-  {% if especies %}
-    {% for e in especies %}
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="{{ e.imagen_url }}" class="card-img-top" alt="{{ e.nombre_comun|default:e.nombre_cientifico }}">
-          <div class="card-body">
-            <h3 class="h6 mb-1">{{ e.nombre_comun|default:e.nombre_cientifico }}</h3>
-            <p class="text-muted mb-0"><em>{{ e.nombre_cientifico }}</em></p>
-          </div>
+
+        <div class="container my-5">
+            <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-0">
+                Zona: Norte grande
+            </h2>
+            <div class="card" style="width: 18rem;">
+            <img src="https://laderasur.com/wp-content/uploads/2018/05/puma.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            </div>
         </div>
-      </div>
-    {% endfor %}
-  {% elif imagenes %}
-    {% for img in imagenes %}
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="{{ img.url }}" class="card-img-top" alt="{{ img.titulo|default:'Imagen' }}">
-          <div class="card-body">
-            <h3 class="h6 mb-0">{{ img.titulo|default:'—' }}</h3>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  {% else %}
-    <div class="col-12"><div class="alert alert-info">No hay imágenes disponibles.</div></div>
-  {% endif %}
+
+
+
+
+<div class="card" style="width: 18rem;">
+  <img src="https://laderasur.com/wp-content/uploads/2018/05/puma.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
 </div>
+
+ 
+
+
+
+</div> <!-- /.album -->
 {% endblock %}
