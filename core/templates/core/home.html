@@ -8,62 +8,104 @@
     <div class="container text-white">
       <h1 class="display-5 fw-bold">Fauna y Flora de Chile</h1>
       <p class="lead mb-0">Explora especies nativas desde el desierto de Atacama hasta la Patagonia.</p>
+
     </div>
   </div>
 </section>
 {% endblock %}
 
 {% block content %}
-<!-- Bloque dinámico 1: Especies destacadas/amenazadas -->
-<section class="mb-5">
-  <div class="d-flex justify-content-between align-items-end mb-3">
-    <h2 class="h4 mb-0">Especies destacadas</h2>
-    <a class="btn btn-sm btn-outline-primary" href="{% url 'galeria' %}">Ver todas</a>
-  </div>
-  <div class="row g-4">
-    {% for e in amenazadas %}
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card h-100">
-          <img src="{{ e.imagen_url }}" class="card-img-top" alt="{{ e.nombre_comun|default:e.nombre_cientifico }}">
-          <div class="card-body">
-            <h3 class="h6 card-title mb-1">{{ e.nombre_comun|default:e.nombre_cientifico }}</h3>
-            <p class="text-muted mb-2"><em>{{ e.nombre_cientifico }}</em></p>
-            {% if e.estado_conservacion_cl %}
-              <span class="badge text-bg-danger">{{ e.get_estado_conservacion_cl_display|default:'Estado N/D' }}</span>
-            {% endif %}
-          </div>
-          <div class="card-footer bg-white">
-            {% if e.simbio_url %}<a href="{{ e.simbio_url }}" class="me-2" target="_blank">SIMBIO</a>{% endif %}
-            {% if e.rce_fuente_url %}<a href="{{ e.rce_fuente_url }}" target="_blank">Clasificación MMA</a>{% endif %}
-          </div>
-        </div>
-      </div>
-    {% empty %}
-      <div class="col-12"><div class="alert alert-info">Aún no hay especies cargadas.</div></div>
-    {% endfor %}
-  </div>
-</section>
+<!-- Bloque 1 -->
+<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+  <div class="col p-4 d-flex flex-column position-static">
+    <h3 class="mb-0">Chile unido por su biodiversidad</h3>
+    <div class="mb-1 text-body-secondary">___________________________________________</div>
+    <p class="card-text mb-auto">
+      Chile es un país privilegiado por la gran diversidad de paisajes y ecosistemas que posee, desde el desierto más árido del mundo hasta los glaciares del extremo sur. Esta variedad de climas y relieves ha permitido el desarrollo de una enorme riqueza natural, con especies únicas que no se encuentran en ningún otro lugar del planeta.
+    </p>
+    <br>
+    <p>
+        La biodiversidad chilena no solo es un patrimonio natural, sino también cultural, porque forma parte de la identidad del país y sostiene a comunidades a través de la agricultura, la pesca, el turismo y la medicina tradicional. Cuidar esta riqueza implica un esfuerzo conjunto entre el Estado, la sociedad civil y cada persona, ya que protegerla significa asegurar el futuro de las próximas generaciones.
+    </p>
 
-<!-- Bloque dinámico 2: Noticias/Curiosidades -->
-<section>
-  <h2 class="h4 mb-3">Últimas noticias</h2>
-  <div class="row g-4">
-    {% for n in noticias %}
-      <div class="col-12 col-md-6">
-        <div class="card h-100">
-          {% if n.imagen_url %}
-          <img src="{{ n.imagen_url }}" class="card-img-top" alt="{{ n.titulo }}">
-          {% endif %}
-          <div class="card-body">
-            <h3 class="h6">{{ n.titulo }}</h3>
-            <p class="mb-2 text-muted">{{ n.fecha_publicacion }}</p>
-            <p class="mb-0">{{ n.contenido|truncatewords:35 }}</p>
-          </div>
-        </div>
-      </div>
-    {% empty %}
-      <div class="col-12"><div class="alert alert-info">Sin noticias por ahora.</div></div>
-    {% endfor %}
   </div>
-</section>
+  
+  <div class="col-auto d-none d-lg-block">
+   <img src="https://www.radioudec.cl/wp-content/uploads/2021/10/fotoespecies.jpg" width="500" alt="">
+  </div>
+</div>
+
+<!-- Bloque 2 -->
+ <hr>
+ <div class="accordion" id="accordionPanelsStayOpenExample">
+    <h3>Zonas del país</h3>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Zona norte grante<img src="https://i.ibb.co/dwG1xhKQ/image.png" width="40" alt="image" border="0">
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        El <strong>Norte Grande </strong>comprende desde la región de Arica y Parinacota hasta la de Antofagasta. Es un territorio dominado por el desierto de Atacama, considerado el más árido del mundo, donde las precipitaciones son escasas y los contrastes de temperatura entre día y noche son muy marcados. A pesar de estas condiciones extremas, la biodiversidad se ha adaptado de manera única. En la flora destacan las llaretas, cactus columnares y el tamarugo, que resiste suelos salinos en lugares como la Pampa del Tamarugal. En la fauna encontramos camélidos andinos como la vicuña y la llama, zorros como el culpeo, vizcachas en las quebradas, y flamencos en los salares altoandinos. Los humedales y bofedales son ecosistemas clave, pues funcionan como oasis de vida en medio del desierto.
+      </div>
+        <img src="//i.ibb.co/21PVxgvX/norte-grande.png" width="160" alt="norte grande" border="0">
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Zona norte chico <img src="https://i.ibb.co/mr5mH7kB/image.png" width="30" alt="image" border="0">
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+        El <strong>Norte Chico</strong> se extiende entre las regiones de Atacama y Coquimbo, presentando un clima semiárido que alterna entre sectores desérticos y fértiles valles transversales. La flora está compuesta por especies resistentes a la sequía, como espinos, algarrobos y guayacanes, además de cactus endémicos. En la fauna se encuentran guanacos, zorros chilla, aves como el cóndor y reptiles adaptados al calor. Un fenómeno característico de esta zona es el Desierto Florido, que ocurre cada ciertos años tras lluvias excepcionales, cuando brotan miles de flores de diversas especies que permanecen latentes en el suelo durante largos periodos de sequía. Esta riqueza natural convierte a la zona en un ejemplo de resiliencia ecológica.      
+    </div>
+    <img src="https://i.ibb.co/g2n5GBJ/norte-chico.png" width="150" alt="norte-chico" border="0">
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Zona central <img src="https://i.ibb.co/cXY0m0ZM/image.png" width="30" alt="image" border="0">
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+La <strong>Zona Central</strong>, que va desde Valparaíso hasta la región del Maule, se caracteriza por un clima mediterráneo con estaciones marcadas: veranos secos e inviernos lluviosos. Es la zona más densamente poblada y agrícola del país, lo que ha generado una fuerte presión sobre sus ecosistemas. Aquí se encuentran los bosques esclerófilos, con especies como el quillay, el boldo, el peumo y el litre, adaptadas a resistir veranos prolongados sin agua. La fauna está representada por aves como la tenca y el peuco, mamíferos como el zorro culpeo y pequeños roedores como el degú. Esta región destaca por su alto nivel de endemismo, es decir, especies que solo existen en Chile, lo que la convierte en un lugar de gran valor ecológico que requiere protección ante el avance urbano y agrícola.      
+    </div>
+    <img src="https://i.ibb.co/ccvLjMsg/centro.png" width="250" alt="centro" border="0">
+    </div>
+
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        zona sur <img src="https://i.ibb.co/DDY8Dfh6/Bsur.png" width="50" alt="Bsur" border="0">
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body">
+        La <strong>Zona Sur</strong> abarca desde Ñuble hasta Los Lagos y se caracteriza por un clima templado lluvioso, con abundantes precipitaciones durante gran parte del año. Los paisajes están dominados por bosques nativos exuberantes, donde crecen especies emblemáticas como el coigüe, el ulmo, el arrayán y el alerce, considerado uno de los árboles más longevos del planeta. En la fauna destacan el pudú, el ciervo más pequeño del mundo, el monito del monte, marsupial único en su tipo, la ranita de Darwin y aves como el chucao y el carpintero magallánico. La abundancia de ríos y lagos favorece la presencia de peces nativos, aunque también existen problemas por la introducción de especies exóticas como las truchas. Esta zona representa uno de los mayores patrimonios naturales de Chile por su riqueza biológica. 
+    </div>
+        <img src="https://i.ibb.co/FLV1bvHC/sur.png" width="150" alt="sur" border="0"> 
+    </div>
+  </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        zona austral <img src="https://i.ibb.co/TMdzYQZJ/image-removebg-preview.png" width="30" alt="image" border="0">
+      </button>
+    </h2>
+        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+        <div class="accordion-body">
+            La <strong>Zona Austral</strong> comprende las regiones de Aysén y Magallanes, extendiéndose hasta la Antártica. El clima es frío y ventoso, con fiordos, canales e imponentes glaciares que forman parte de los Campos de Hielo Patagónicos. Los bosques subantárticos, compuestos por lengas, coigües de Magallanes y ñires, cubren gran parte del territorio, resistiendo las bajas temperaturas. La fauna terrestre incluye guanacos, zorros y huemules, este último en peligro de extinción y símbolo nacional. En el ámbito marino, la biodiversidad es extraordinaria: lobos marinos, delfines, ballenas, pingüinos y una gran variedad de aves marinas habitan sus costas. Esta zona es reconocida mundialmente como una de las regiones más prístinas del planeta, con ecosistemas poco intervenidos que poseen un valor incalculable para la conservación.      
+        </div>
+        <img src="https://i.ibb.co/PGPbCHvZ/austral.png" width="200" alt="austral" border="0">            
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
