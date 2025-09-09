@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top" data-bs-theme="light">
   <div class="container">
     <img src="https://i.ibb.co/V0gDQZdq/image.png" width="50" alt="">
-    <a class="navbar-brand fw-bold" href="{% url 'home' %}">Chile Nativo</a>
+    <a class="navbar-brand fw-bold" href="/">Chile Nativo</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
             aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación">
@@ -13,11 +13,11 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link {% if current == 'home' %}active{% endif %}" 
-             aria-current="{% if current == 'home' %}page{% endif %}" href="{% url 'home' %}">Home</a>
+             aria-current="{% if current == 'home' %}page{% endif %}" href="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {% if current == 'about' %}active{% endif %}" 
-             aria-current="{% if current == 'about' %}page{% endif %}" href="{% url 'about' %}">Quiénes Somos</a>
+             aria-current="{% if current == 'about' %}page{% endif %}" href="/about/">Quiénes Somos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {% if current == 'fq' %}active{% endif %}" 
@@ -25,7 +25,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link {% if current == 'galeria' %}active{% endif %}" 
-             aria-current="{% if current == 'galeria' %}page{% endif %}" href="{% url 'galeria' %}">Galería</a>
+             aria-current="{% if current == 'galeria' %}page{% endif %}" href="/gallery/">Galería</a>
         </li>
       </ul>
       {% endwith %}
