@@ -7,8 +7,8 @@ def inicio(request):
 def about(request):
     return render(request, "core/QS.html")
 
-def fq(request):
-    return render(request, "core/preguntas.html")
+def resources(request):
+    return render(request, "core/recursos.html")
 
 def gallery(request):
     return render(request, "core/galeria.html")

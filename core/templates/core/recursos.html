@@ -1,0 +1,60 @@
+{% extends "core/base.html" %} {% block banner %}
+<section class="position-relative">
+  <img
+    src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1600&auto=format&fit=crop"
+    class="w-100"
+    style="max-height: 440px; object-fit: cover"
+    alt="Recursos educativos"
+  />
+  <div
+    class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay-dark"
+  >
+    <div class="container text-white">
+      <h1 class="display-5 fw-bold">Recursos Educativos</h1>
+      <p class="lead mb-0">
+        Libros, documentales y sitios web sobre la biodiversidad chilena.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block content %}
+<div class="row mb-5">
+  <div class="col-12">
+    <h2 class="h4 border-bottom pb-2 mb-4">Material recomendado</h2>
+    <p class="lead">
+      Una selección de recursos para profundizar en el conocimiento de nuestra
+      fauna y flora.
+    </p>
+  </div>
+</div>
+
+<!-- LIBROS -->
+<div class="row mb-5">
+  <div class="col-12">
+    <div class="d-flex align-items-center mb-4">
+      <i class="fa-solid fa-book fs-1 text-success me-3"></i>
+      <h2 class="h3 mb-0">Libros</h2>
+    </div>
+
+    <div class="list-group">
+      <div class="list-group-item border-0 py-3">
+        <h5 class="mb-1">Libro 1</h5>
+        <p class="mb-1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
+          blanditiis quis consequuntur quidem dolorem illum assumenda reiciendis
+          excepturi vitae, omnis, repellendus ducimus provident vel sint ipsum
+          expedita itaque ratione totam.
+        </p>
+        <small class="text-muted"
+          ><strong>Autor:</strong> Autor | <strong>Editorial:</strong> Editorial
+          Chile Nativo</small
+        >
+      </div>
+
+   
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock%}
