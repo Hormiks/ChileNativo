@@ -1,30 +1,24 @@
-{% extends "core/base.html" %} {% block banner %}
+{% extends 'core/base.html' %}
+
+{% block banner %}
 <section class="position-relative">
-  <img
-    src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1600&auto=format&fit=crop"
-    class="w-100"
-    style="max-height: 440px; object-fit: cover"
-    alt="Recursos educativos"
-  />
-  <div
-    class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay-dark"
-  >
+  <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1600&auto=format&fit=crop" class="w-100"
+    style="max-height: 440px; object-fit: cover" alt="Recursos educativos" />
+  <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay-dark">
     <div class="container text-white">
       <h1 class="display-5 fw-bold">Recursos Educativos</h1>
-      <p class="lead mb-0">
-        Libros, documentales y sitios web sobre la biodiversidad chilena.
-      </p>
+      <p class="lead mb-0">Libros, documentales y sitios web sobre la biodiversidad chilena.</p>
     </div>
   </div>
 </section>
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <div class="row mb-5">
   <div class="col-12">
     <h2 class="h4 border-bottom pb-2 mb-4">Material recomendado</h2>
-    <p class="lead">
-      Una selección de recursos para profundizar en el conocimiento de nuestra
-      fauna y flora.
-    </p>
+    <p class="lead">Una selección de recursos para profundizar en el conocimiento de nuestra fauna y flora. </p>
+    <p class="lead"><strong>¡Diviertete mientras aprendes!</strong></p>
   </div>
 </div>
 
@@ -37,24 +31,241 @@
     </div>
 
     <div class="list-group">
+      <!-- Libro 1 -->
       <div class="list-group-item border-0 py-3">
-        <h5 class="mb-1">Libro 1</h5>
-        <p class="mb-1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex,
-          blanditiis quis consequuntur quidem dolorem illum assumenda reiciendis
-          excepturi vitae, omnis, repellendus ducimus provident vel sint ipsum
-          expedita itaque ratione totam.
-        </p>
-        <small class="text-muted"
-          ><strong>Autor:</strong> Autor | <strong>Editorial:</strong> Editorial
-          Chile Nativo</small
-        >
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://libroverde.org/wp-content/uploads/2020/10/9788494189241.jpg"
+              class="img-fluid rounded shadow-sm" alt="Portada Flora y Fauna de Chile" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <a href="https://bosquechileno.cl/products/flora-y-fauna-de-chile-guia-de-identificacion" target="_blank"
+              rel="noopener noreferrer">
+              <h5 class="mb-1">Flora y Fauna de Chile - Guía de identificación</h5>
+            </a>
+            <p class="mb-1">Una guía visual que recorre la asombrosa biodiversidad de Chile, desde el árido desierto
+              hasta la Patagonia, detallando con ilustraciones y descripciones concisas a las especies más emblemáticas
+              y únicas de su flora y fauna.</p>
+            <small class="text-muted"><strong>Autor:</strong>Sharon Chester | <strong>Editorial:</strong> Lynx</small>
+          </div>
+        </div>
       </div>
 
-   
+      <!-- Libro 2 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://libroverde.org/wp-content/uploads/2020/10/9788487334870.jpg"
+              class="img-fluid rounded shadow-sm" alt="Portada Aves de Chile" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <a href="https://www.alerceliterario.cl/product/aves-de-chile" target="_blank" rel="noopener noreferrer">
+              <h5 class="mb-1">Aves de Chile: Guía de Campo</h5>
+            </a>
+            <p class="mb-1">"Aves de Chile" es una guía completa y accesible que combina información
+              precisa y detallada con hermosas ilustraciones. </p>
+            <small class="text-muted">
+              <strong>Autor:</strong> Álvaro Jaramillo | <strong>Editorial:</strong> Lynx Ediciones
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro 3 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://libroverde.org/wp-content/uploads/2021/08/9789564042053-1.png"
+              class="img-fluid rounded shadow-sm" alt="Portada Guía de los Mamíferos de Chile"
+              style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <a href="https://libroverde.org/producto/guia-de-los-mamiferos-de-chile-2da-ed/" target="_blank"
+              rel="noopener noreferrer">
+              <h5 class="mb-1">Guía de los Mamíferos de Chile</h5>
+            </a>
+            <p class="mb-1">La Guía los Mamíferos de Chile contiene información actualizada sobre la
+              diversidad biológica de 76 especies de mamíferos que viven en territorio de Chile, sus características
+              biológicas y ecológicas.</p>
+            <small class="text-muted">
+              <strong>Autor:</strong> Agustín Iriarte | <strong>Editorial:</strong> Flora y Fauna
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Libro 4 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://libroverde.org/wp-content/uploads/2025/08/9789564201405.png"
+              class="img-fluid rounded shadow-sm" alt="Portada Flora de la región del Biobío"
+              style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <a href="https://libroverde.org/producto/flora-de-la-region-del-biobio/" target="_blank"
+              rel="noopener noreferrer">
+              <h5 class="mb-1">Flora de la región del Biobío</h5>
+            </a>
+            <p class="mb-1">Especies vegetales de la Patagonia chilena y argentina con claves de identificación.</p>
+            <small class="text-muted">
+              <strong>Autores:</strong> Alicia Marticorena, Carlos M. Baeza, Eitel Thielemann, Sebastián Teillier |
+              <strong>Editorial:</strong> Universidad de Concepción
+            </small>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-{% endblock%}
+<!-- DOCUMENTALES -->
+<div class="row mb-5">
+  <div class="col-12">
+    <div class="d-flex align-items-center mb-4">
+      <i class="fa-solid fa-film fs-1 text-success me-3"></i>
+      <h2 class="h3 mb-0">Documentales</h2>
+    </div>
+
+    <div class="list-group">
+      <!-- Documental 1 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img
+              src="https://cdn-images.dzcdn.net/images/cover/6cfe14dd229001bf04ee736d4ce0c34c/1900x1900-000000-80-0-0.jpg"
+              class="img-fluid rounded shadow-sm" alt="Wild Chile" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Wild Chile: Un viaje salvaje</h5>
+            <p class="mb-1">Serie documental que recorre los extremos geográficos y ecológicos de Chile.</p>
+            <small class="text-muted">
+              <strong>Productor:</strong> Nedo Films y Equilibrio Films |
+              <strong>Disponible en:</strong> Chilevisión, Disney+, Prime Video, YouTube
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documental 2 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://i.ytimg.com/vi/KG-d9xUNyTY/maxresdefault.jpg" class="img-fluid rounded shadow-sm"
+              alt="Miniatura de video Fauna de Chile - Al Sur del Mundo" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Fauna de Chile - Al Sur del Mundo</h5>
+            <p class="mb-1">Documental de dos horas originalmente emitido en dos partes. La primera parte recorre
+              la evolución de insectos, reptiles y aves acuáticas. La segunda parte muestra la evolución de otras aves y
+              de los mamíferos en el territorio de Chile.</p>
+            <small class="text-muted">
+              <strong>Productora:</strong> Sur Imagen |
+              <strong>Disponible en:</strong> Youtube
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documental 3 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://i.ytimg.com/vi/0rdiPUVvpGE/maxresdefault.jpg" class="img-fluid rounded shadow-sm"
+              alt="Miniatura video de youtube 'Invasores - Cap. 1: El Visón" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Invasores</h5>
+            <p class="mb-1">Es una serie documental que aborda la actual problemática que enfrentan seis territorios de
+              nuestro país debido a la presencia de Especies Exóticas Invasoras (EEI).</p>
+            <small class="text-muted">
+              <strong>Director:</strong> Universidad de Chile |
+              <strong>Disponible en:</strong> Youtube
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SITIOS WEB -->
+<div class="row mb-5">
+  <div class="col-12">
+    <div class="d-flex align-items-center mb-4">
+      <i class="fa-solid fa-globe fs-1 text-success me-3"></i>
+      <h2 class="h3 mb-0">Sitios Web</h2>
+    </div>
+
+    <div class="list-group">
+      <!-- Sitio 1 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://storage.googleapis.com/chile-travel-cdn/2023/01/90bfa25b-ave-chiricoca.jpg"
+              class="img-fluid rounded shadow-sm" alt="Imagen de una Chiricoca" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Aves de Chile</h5>
+            <p class="mb-1">Portal oficial con información sobre especies, ecosistemas y conservación en Chile.</p>
+            <small class="text-muted"><strong>Enlace:</strong> <a href="https://www.avesdechile.cl/" target="_blank"
+                rel="noopener noreferrer">avesdechile.cl/</a></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sitio 2 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="http://www.chilebosque.cl/chilebosque_hojita.jpg" class="img-fluid rounded shadow-sm"
+              alt="Logo página web chilebosque.cl" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Chilebosque</h5>
+            <p class="mb-1">Base de datos colaborativa y comunitaria con información sobre flora nativa chilena.</p>
+            <small class="text-muted"><strong>Enlace:</strong> <a href="http://www.chilebosque.cl/" target="_blank"
+                rel="noopener noreferrer">chilebosque.cl/</a></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sitio 3 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img src="https://www.bibliotecanacionaldigital.gob.cl/bnd/612/articles-338888_imagen_03.jpg"
+              class="img-fluid rounded shadow-sm" alt="Ornitología Chile" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Chile para Niños</h5>
+            <p class="mb-1">Sitio web para niños especializado en educación sobre chile, posee una sección para la fauna
+              chilena con distintas actividades interactivas y didáctivas.</p>
+            <small class="text-muted"><strong>Enlace:</strong>
+              <a href="https://www.chileparaninos.gob.cl/639/w3-article-321217.html" target="_blank"
+                rel="noopener noreferrer">chileparaninos.gob.cl</a></small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sitio 4 -->
+      <div class="list-group-item border-0 py-3">
+        <div class="row align-items-center">
+          <div class="col-2 col-md-1 text-center">
+            <img
+              src="https://faunaparachile.cl/wp-content/uploads/2022/04/cropped-cropped-@faunaparachile-1-e1649211588456.png"
+              class="img-fluid rounded shadow-sm" alt="Logo de Fauna para Chile" style="max-height: 80px;" />
+          </div>
+          <div class="col-10 col-md-11">
+            <h5 class="mb-1">Fauna Para Chile </h5>
+            <p class="mb-1">Página dedicada a la educación ambiental mediante infografías y contenido gratuito de fauna
+              chilena que busca promover la conservación de especies a través del conocimiento.</p>
+            <small class="text-muted"><strong>Enlace:</strong><a href="https://faunaparachile.cl/" target="_blank"
+                rel="noopener noreferrer">faunaparachile.cl/</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
