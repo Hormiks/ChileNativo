@@ -1,15 +1,13 @@
 {% extends "core/base.html" %}
 
-<!--HOLI :DDD-->
-<!--Adiós :000-->
 {% block banner %}
 <section class="position-relative">
-  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop"
+  <img src="https://images.unsplash.com/photo-1652186377191-e00a361b2a69"
        class="w-100" style="max-height: 440px; object-fit: cover;" alt="Paisaje chileno">
   <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center overlay-dark">
     <div class="container text-white">
-      <h1 class="display-5 fw-bold">Fauna y Flora de Chile</h1>
-      <p class="lead mb-0">Explora especies nativas desde el desierto de Atacama hasta la Patagonia.</p>
+      <h1 class="display-6 fw-bold">Comprometidos con la Biodiversidad: Flora y Fauna Chilena</h1>
+      <p class="lead mb-0 me-5">En Chile Nativo te invitamos a conocer y cuidar la fauna y flora chilena mediante contenido educativo y colaborativo, basado en fuentes confiables, porque proteger nuestra naturaleza es también proteger nuestro futuro.</p>
 
     </div>
   </div>
@@ -18,18 +16,130 @@
 
 {% block content %}
 <div class="row g-4 align-items-center">
-  <div class="col-12 col-lg-6">
-    <h2 class="h4">Nuestro propósito</h2>
-    <p>Difundir y educar sobre la biodiversidad chilena, fomentando la conservación de especies nativas y endémicas,
-       y promoviendo el acceso abierto a información confiable mediante fuentes oficiales.</p>
-    <ul class="list-unstyled">
-      <li><i class="fa-solid fa-leaf me-2 text-success"></i>Enfoque educativo y colaborativo</li>
-      <li><i class="fa-solid fa-mountain me-2 text-success"></i>Contenido basado en fuentes públicas</li>
-      <li><i class="fa-solid fa-earth-americas me-2 text-success"></i>Respeto por licencias y atribuciones</li>
-    </ul>
+
+  <!-- Nuestro Propósito -->
+  <div class="col-12 col-lg-12">
+    <h2 class="h4 fw-bold text-center">Nuestro propósito</h2>
+    
+    <!-- Card Blanco -->
+    <div class="bg-white p-3 p-lg-4 rounded shadow border">
+      <div class="row g-4 ">
+      
+        <!-- Texto descriptivo -->
+        <div class="col-12 col-lg-7">
+          <p>Difundir y educar sobre la biodiversidad chilena, fomentando la conservación de especies nativas y endémicas,
+            y promoviendo el acceso abierto a información confiable mediante fuentes oficiales.</p>
+        <hr class="border-top border-success">
+        
+        <!-- Subtítulo -->
+        <h5 class="fw-bold mt-2 mb-2 text-success">Cómo lo hacemos</h5>
+          <ul class="list-unstyled">
+            <li><i class="fa-solid fa-book me-2 text-success"></i>Produciendo contenido educativo sobre especies chilenas</li>
+            <li><i class="fa-solid fa-microscope me-2 text-success"></i>Resaltando investigaciones y datos científicos confiables</li>
+            <li><i class="fa-solid fa-hands-helping me-1 text-success"></i>Promoviendo la colaboración con instituciones y expertos en conservación</li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="col-12 col-lg-4 d-flex justify-content-end align-self-start">
+          <img src="https://i.ibb.co/V0gDQZdq/image.png" alt="" class="img-fluid " width="230px">
+        </div>
+
+      </div>
+    </div>
   </div>
+
+<div class="row g-4 mb-4">
+  
+  <!-- Qué hacemos -->
   <div class="col-12 col-lg-6">
-<img src="https://i.ibb.co/V0gDQZdq/image.png" alt="">    
+    <h2 class="h4 ms-4">Qué hacemos</h2>
+    
+    <!-- Card Blanco -->
+    <div class="bg-white p-3 p-lg-4 rounded shadow border h-100">
+      <p>En Chile Nativo trabajamos para acercar la biodiversidad chilena a todos. A través de distintos proyectos y actividades, buscamos fomentar el conocimiento, la protección y el aprecio por nuestras especies nativas y endémicas.</p>
+      
+      <hr class="border-top border-success">
+      
+      <!-- Subtítulo -->
+      <h5 class="fw-bold mt-2 mb-2 text-success">Nuestras acciones</h5>
+
+      <ul class="list-unstyled">
+        <li><i class="fa-solid fa-chalkboard-teacher me-2 text-success"></i>Creación de materiales educativos sobre fauna y flora chilena</li>
+        <li><i class="fa-solid fa-leaf me-2 text-success"></i>Organización de talleres, charlas y actividades de conservación</li>
+        <li><i class="fa-solid fa-users me-2 text-success"></i>Colaboración con expertos, instituciones y organizaciones ambientalistas</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Valores -->
+  <div class="col-12 col-lg-6">
+    <h2 class="h4 ms-4">Valores</h2>
+    
+    <!-- Card Blanco -->
+    <div class="bg-white p-3 p-lg-4 rounded shadow border h-100">
+      <p>Nuestro compromiso con la biodiversidad chilena se refleja en principios que guían cada acción que realizamos. 
+      Estos valores buscan inspirar el respeto por la naturaleza y fortalecer la confianza en la información que compartimos.</p>
+      
+      <hr class="border-top border-success my-2">
+
+      <!-- Subtítulo -->
+      <h5 class="fw-bold mt-2 mb-2 text-success">Principios que nos guían</h5>
+      
+      <ul class="list-unstyled">
+        <li><i class="fa-solid fa-leaf me-2 text-success"></i>Respeto por la biodiversidad y las especies nativas</li>
+        <li><i class="fa-solid fa-book me-2 text-success"></i>Transparencia y rigor en la información compartida</li>
+        <li><i class="fa-solid fa-hands-helping me-2 text-success"></i>Colaboración y trabajo conjunto con expertos y comunidades</li>
+        <li><i class="fa-solid fa-globe me-2 text-success"></i>Compromiso con la educación y el acceso abierto al conocimiento</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- Nuestras Redes -->
+<div class="row mt-5">
+  <div class="col-12 col-lg-12">
+    <h2 class="h4 ms-4">Nuestras redes</h2>
+    
+    <!-- Card Blanco -->
+    <div class="bg-white p-3 p-lg-4 rounded shadow border">
+        
+      <!-- Texto descriptivo -->
+      <p>Conéctate con nosotros y sé parte de esta comunidad que busca inspirar, educar y proteger la biodiversidad de Chile.</p>
+      
+      <hr class="border-top border-success my-2">
+
+      <!-- Subtítulo -->
+      <h5 class="fw-bold mt-2 mb-3 text-success">Contáctanos</h5>
+      
+      <!-- Lista de redes -->
+      <ul class="list-unstyled">
+          <li>
+            <i class="fa-brands fa-instagram me-2 text-success"></i>
+            <a href="https://www.instagram.com/" target="_blank" class="text-decoration-none text-dark">
+              @chilenativo
+            </a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope me-2 text-success"></i>
+            <a href="mailto:contacto@chilenativo.cl" class="text-decoration-none text-dark">
+              contacto@chilenativo.cl
+            </a>
+          </li>
+          <li>
+            <i class="fa-brands fa-facebook me-2 text-success"></i>
+            <a href="https://www.facebook.com/" target="_blank" class="text-decoration-none text-dark">
+              Chile Nativo
+            </a>
+          </li>
+      </ul>
+    </div>
   </div>
 </div>
+</div>
+
+
 {% endblock %}
+
+
