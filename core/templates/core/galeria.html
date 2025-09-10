@@ -3,19 +3,30 @@
 {% block banner %}
 <section class="bg-success-subtle py-5">
   <div class="container">
-    <h1 class="display-6 fw-bold">Galería</h1>
-    <p class="mb-0">Imágenes de algunas especies nativas a lo largo del país.</p>
+    <h1 class="display-6 fw-bold">Galería de especies Nativas</h1>
+    <hr>
+    <p class="mb-0">Chile es un país con una geografía muy diversa, que va desde el desierto más árido del mundo en el norte hasta los bosques templados y glaciares en el sur austral. Esta variedad de climas y paisajes ha dado origen a una gran riqueza de especies, muchas de ellas nativas y endémicas, es decir, que solo existen en esta parte del mundo.</p>
+    <br>
+    En conjunto, estas especies son parte del patrimonio natural de Chile, reflejando la increíble capacidad de la vida para adaptarse a los distintos ambientes que nos entrega este país.
   </div>
 </section>
 {% endblock %}
 
 {% block content %}
-
 <!--Zona 1: Norte Grande-->
 <div class="container my-5">
-    <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-4">
-        Zona: Norte grande
-    </h2>
+  <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-3">
+    <a class="text-decoration-none d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#zonaNorteGrande" role="button" aria-expanded="false" aria-controls="zonaNorteGrande">
+      <span>Zona: Norte Grande</span>
+      <span class="toggle-icon ms-2" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 12.854a.5.5 0 0 1-.708-.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 1 .708-.708l3.5 3.5a1.5 1.5 0 0 1 0 2.121l-3.5 3.5z"/>
+        </svg>
+      </span>
+    </a>
+  </h2>
+  <div class="collapse" id="zonaNorteGrande">
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
         <!-- Tarjeta 1 -->
@@ -155,13 +166,23 @@
 
     </div>
 </div>
-
-
+    </div>
+</div>
+<hr>
 <!--Zona 2: Norte chico-->
 <div class="container my-5">
-    <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-4">
-        Zona: Norte Chico
-    </h2>
+  <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-3">
+    <a class="text-decoration-none d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#zonaNorteChico" role="button" aria-expanded="false" aria-controls="zonaNorteChico">
+      <span>Zona: Norte chico</span>
+      <span class="toggle-icon ms-2" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 12.854a.5.5 0 0 1-.708-.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 1 .708-.708l3.5 3.5a1.5 1.5 0 0 1 0 2.121l-3.5 3.5z"/>
+        </svg>
+      </span>
+    </a>
+  </h2>
+  <div class="collapse" id="zonaNorteChico">
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
         <!-- Tarjeta 1 -->
@@ -301,12 +322,24 @@
 
     </div>
 </div>
+</div>
+</div>
 
+<hr>
 <!--Zona 3: centro-->
 <div class="container my-5">
-    <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-4">
-        Zona: Central
-    </h2>
+  <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-3">
+    <a class="text-decoration-none d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#zonaCentral" role="button" aria-expanded="false" aria-controls="zonaCentral">
+      <span>Zona: Central</span>
+      <span class="toggle-icon ms-2" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 12.854a.5.5 0 0 1-.708-.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 1 .708-.708l3.5 3.5a1.5 1.5 0 0 1 0 2.121l-3.5 3.5z"/>
+        </svg>
+      </span>
+    </a>
+  </h2>
+  <div class="collapse" id="zonaCentral">
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
         <!-- Tarjeta 1 -->
@@ -447,13 +480,23 @@
 
     </div>
 </div>
-
-
+</div>
+</div>
+<hr>
 <!--Zona 4: Sur-->
 <div class="container my-5">
-    <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-4">
-        Zona: Sur
-    </h2>
+  <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-3">
+    <a class="text-decoration-none d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#zonaSur" role="button" aria-expanded="false" aria-controls="zonaSur">
+      <span>Zona: Sur</span>
+      <span class="toggle-icon ms-2" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 12.854a.5.5 0 0 1-.708-.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 1 .708-.708l3.5 3.5a1.5 1.5 0 0 1 0 2.121l-3.5 3.5z"/>
+        </svg>
+      </span>
+    </a>
+  </h2>
+  <div class="collapse" id="zonaSur">
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
         <!-- Tarjeta 1 -->
@@ -594,13 +637,23 @@
 
     </div>
 </div>
-
-
+</div>
+</div>
+<hr>
 <!--Zona 5: Austral-->
 <div class="container my-5">
-    <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-4">
-        Zona: Austral
-    </h2>
+  <h2 class="fw-bold border-start border-4 border-danger ps-3 mb-3">
+    <a class="text-decoration-none d-flex align-items-center justify-content-between" data-bs-toggle="collapse" href="#zonaAustral" role="button" aria-expanded="false" aria-controls="zonaAustral">
+      <span>Zona: Austral</span>
+      <span class="toggle-icon ms-2" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6.646 12.854a.5.5 0 0 1-.708-.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 1 .708-.708l3.5 3.5a1.5 1.5 0 0 1 0 2.121l-3.5 3.5z"/>
+        </svg>
+      </span>
+    </a>
+  </h2>
+  <div class="collapse" id="zonaAustral">
+<div class="container my-5">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
 
         <!-- Tarjeta 1 -->
