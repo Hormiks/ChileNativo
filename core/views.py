@@ -10,5 +10,3 @@ def about(request):
 def resources(request):
     return render(request, "core/recursos.html")
 
-def gallery(request):
-    return render(request, "core/galeria.html")
